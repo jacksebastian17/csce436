@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webcam</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body onload="autoRefresh()">
+    <div class="container">
+        <h1>Object Detection</h1>
+        <div class="video-container">
+            <img src="{{ url_for('video_feed') }}" alt="Video feed not available" />
+        </div>
+        <a href="{{ url_for('home') }}"><button>Back</button></a>
+    </div>
+</body>
+</html>

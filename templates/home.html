@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='apple.jpg') }}" alt="Grocery Helper logo" width="300" height="300">
+        <h1>CSCE 436 Group 2 - Grocery Helper (object detection)</h1>
+        <a href="{{ url_for('index') }}"><button>Start</button></a>
+
+        <div class="description">
+            <h2>About the app</h2>
+            <p>Grocery Helper is an app that uses computer vision to help visually impaired people identify objects while shopping by providing audio output. Simply point your phone's camera at an object, 
+                and the app will tell you what it is.<br><br>
+
+                Grocery Helper app uses computer vision to identify objects in real-time using the OpenCV library and the YOLOv4 object detection algorithm. OpenCV is a powerful computer vision library that 
+                provides tools for image processing, feature detection, and object tracking. YOLOv4 is a state-of-the-art object detection algorithm that uses a deep neural network to detect objects in images and 
+                videos. The algorithm has been trained on a large dataset of images and is capable of detecting a wide range of objects, including fruits, vegetables, and other grocery items. The YOLOv4 algorithm 
+                is implemented using the Darknet framework, which is an open-source neural network framework written in C and CUDA. The Grocery Helper app uses the pre-trained YOLOv4 weights to detect objects in 
+                real-time, and provides an audio output to assist visually impaired users in identifying objects while shopping.
+            </p>
+
+            <h2>How to use the app:</h2>
+            <ol>
+                <li>Open Grocery Helper app on your phone.</li>
+                <li>Press the green "Start" button.</li>
+                <li>Make sure you allow camera privileges on the device you're using it on.</li>
+                <li>Point your phone's camera at an object you want to identify.</li>
+                <li>Wait for the app to provide an audio description of the object.</li>
+                <li>Repeat steps 4-5 for any other objects you want to identify.</li>
+                <li>When you're finished shopping, click the "Back" button to end the session and go back to the home page.</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
